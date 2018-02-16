@@ -36,7 +36,7 @@ const size_t   CRYPTONOTE_COINBASE_BLOB_RESERVED_SIZE        = 600;
 const size_t   CRYPTONOTE_DISPLAY_DECIMAL_POINT              = 10;
 //TODO Define minimum fee for transactions
 const uint64_t MINIMUM_FEE                                   = UINT64_C(100000);
-const uint64_t DEFAULT_DUST_THRESHOLD                        = const uint64_t MINIMUM_FEE = 100000;
+const uint64_t DEFAULT_DUST_THRESHOLD                        = MINIMUM_FEE;
 
 //TODO Define preferred block's target time
 const uint64_t DIFFICULTY_TARGET                             = 120; // seconds
@@ -74,7 +74,7 @@ const char     MINER_CONFIG_FILE_NAME[]                      = "miner_conf.json"
 
 //TODO Put here the name of your currency
 const char     CRYPTONOTE_NAME[]                             = "lithiumbit";
-const char     GENESIS_COINBASE_TX_HEX[]                     = ""; //"010a01ff0001cfc8e0c8e38a01029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd0880712101a0d7e5e355c924a1d5644bc6c0944324cdaa3bfe8cd324b3a3548fac795afc1e"
+const char     GENESIS_COINBASE_TX_HEX[]                     = "010a01ff0001cfc8e0c8e38a01029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd0880712101a0d7e5e355c924a1d5644bc6c0944324cdaa3bfe8cd324b3a3548fac795afc1e";
 
 const uint8_t  CURRENT_TRANSACTION_VERSION                   =  1;
 const uint8_t  BLOCK_MAJOR_VERSION_1                         =  1;
@@ -106,8 +106,11 @@ const char     P2P_STAT_TRUSTED_PUB_KEY[]                    = "";
 
 //TODO Add here your network seed nodes
 const std::initializer_list<const char*> SEED_NODES = {
+  "207.148.7.77:15154",
+  "45.32.141.225:15154",
   "144.202.19.204:15154",
-  "144.202.16.86:15154"
+  "144.202.16.86:15154",
+  "motivados.dontexist.com:15154"
 };
 
 struct CheckpointData {
